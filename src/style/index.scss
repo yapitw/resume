@@ -160,7 +160,9 @@ img.portrait {
 
 @media print {
   html {
-    line-height: 1em;
+    line-height: 1.2em;
+    font-size: 14px;
+    background-color: transparent;
   }
   .container {
     max-width: initial;
@@ -177,10 +179,6 @@ img.portrait {
   }
   #column1 {
     margin-top: 0;
-  }
-  html {
-    font-size: 15px;
-    background-color: transparent;
   }
   canvas {
     width: 100px;
