@@ -164,7 +164,7 @@ export default class CanvasBG {
       createTextMeshes(font);
     });
     const geo_option = {
-      amount: 0.13,
+      depth: 0.13,
       bevelEnabled: false,
       material: 0,
       extrudeMaterial: 1,
