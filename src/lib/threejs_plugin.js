@@ -10,7 +10,6 @@ opentype.Glyph.prototype._3_getPath = function(x, y, fontSize) {
   var scale = (1 / this.font.unitsPerEm) * fontSize;
   var p = new opentype.Path();
   var commands = this.path.commands;
-  console.log(commands);
 
   for (var i = 0; i < commands.length; i += 1) {
     var cmd = commands[i];

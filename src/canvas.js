@@ -84,7 +84,6 @@ export default class CanvasBG {
     }
 
     function onTouchMove(event) {
-      console.log(event);
       event.preventDefault();
       const x = event.touches[0].clientX;
       const y = event.touches[0].clientY;

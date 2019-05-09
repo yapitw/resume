@@ -91,17 +91,16 @@ h3 {
 }
 
 a {
-  color: darken(greenyellow, 30%); // color: darken(blue, 15%);
+  color: #4d66d8;
 }
 
 .subtitle {
   padding-left: $tiny-size;
-  border-left: 0.3rem solid rgba(0, 0, 0, 0.5);
+  border-left: 0.18rem solid rgba(0, 0, 0, 0.5);
 }
 
 ul {
-  padding-left: $tiny-size + 0.3rem;
-  // padding-top: $tiny-size;
+  padding-left: $tiny-size;
 }
 
 li {
@@ -154,22 +153,35 @@ img.portrait {
   }
 }
 
+@page {
+  size: A4;
+  margin: 2em 0;
+}
+
 @media print {
   html {
-    line-height: 1.2em;
+    line-height: 1em;
+  }
+  .container {
+    max-width: initial;
   }
   .column {
     width: 100%;
+    padding-bottom: 0;
   }
   #column1 {
-    // columns: 2;
     display: flex;
+    .block {
+      width: 50%;
+    }
+  }
+  #column1 {
+    margin-top: 0;
   }
   html {
-    font-size: 14px;
+    font-size: 15px;
     background-color: transparent;
   }
-
   canvas {
     width: 100px;
   }
