@@ -103,6 +103,7 @@ ul {
   padding-left: $tiny-size;
 }
 
+p,
 li {
   margin-top: 0.5em;
 }
@@ -160,8 +161,8 @@ img.portrait {
 
 @media print {
   html {
-    line-height: 1.2em;
-    font-size: 14px;
+    line-height: 1.3em;
+    font-size: 12px;
     background-color: transparent;
   }
   .container {
