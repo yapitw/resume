@@ -1,0 +1,163 @@
+@import "./setting.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  // overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  padding: $small-size;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+}
+
+.column,
+.row {
+  padding: $tiny-size;
+}
+
+.column--left {
+  width: 100%;
+}
+
+.column--right {
+  width: 100%;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: $desktop-width) {
+  .column--left {
+    width: 30%;
+  }
+  .column--right {
+    width: 70%;
+  }
+}
+
+.first-title {
+  margin-top: 0;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2.2rem;
+  margin-top: $small-size;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-top: $tiny-size;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: $tiny-size;
+}
+
+a {
+  color: darken(greenyellow, 30%); // color: darken(blue, 15%);
+}
+
+.subtitle {
+  padding-left: $tiny-size;
+  border-left: 0.3rem solid rgba(0, 0, 0, 0.5);
+}
+
+ul {
+  padding-left: $tiny-size + 0.3rem;
+  // padding-top: $tiny-size;
+}
+
+li {
+  margin-top: .5em;
+}
+
+img.portrait {
+  width: 250px;
+  height: 250px;
+  filter: saturate(0) contrast(0.95) brightness(1.2);
+}
+
+.work__img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.email-me a {
+  background: $black;
+  bottom: 0;
+  border-radius: 50%;
+  color: $white;
+  display: inline-block;
+  height: 100px;
+  line-height: 20px;
+  margin: 30px;
+  opacity: 0.6;
+  padding: 30px 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.2s;
+  width: 100px;
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.email-me {
+  text-align: center;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .mobile {
+    display: none;
+  }
+  .column--right {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media print {
+  html {
+    line-height: 1.2em;
+  }
+  #column1 {
+    columns: 2;
+  }
+  html {
+    font-size: 14px;
+    background-color: transparent;
+  }
+
+  canvas {
+    width: 100px;
+  }
+}

@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+// @import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+
+$desktop-width: 1024px;
+// Sizes
+$tiny-size: 1rem;
+$small-size: 2rem;
+$medium-size: 5rem;
+
+// Colors
+$white: #f0f0f0;
+$black: #222;
+$bg: $white;
+$font: $black;
+
+html {
+  font-size: 16px;
+  font-family: "Noto Sans", Helvetica, Arial, "microsoft yahei",
+    "microsoft jhenghei", sans-serif;
+  line-height: 1.5em;
+  background-color: $bg;
+  color: $font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
