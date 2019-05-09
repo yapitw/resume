@@ -248,13 +248,24 @@ export default class CanvasBG {
       event.preventDefault();
     });
     const animate = () => {
+      if (!this.play) return;
       this.frameId = requestAnimationFrame(animate);
       TWEEN.update();
       renderer.render(scene, camera);
       // controls.update();
     };
 
+    const detectPause = () => {
+      if (this.mount.getBoundingClientRect().top < window.innerHeight) {
+        this.play = true;
+        animate();
+      } else {
+        this.play = false;
+      }
+    };
+    window.addEventListener("scroll", detectPause);
     animate();
+    detectPause();
 
     // 加入其他幾何元素
     //   elem.sphere = new THREE.Mesh(
