@@ -9,7 +9,7 @@ export default class CanvasBG {
   constructor() {
     this.init = this.init.bind(this);
     this.destroy = this.destroy.bind(this);
-    this.mount = document.querySelector(".canvas-bg");
+    this.mount = document.querySelector(".canvas-wrapper");
     if (this.mount) this.init();
   }
   init() {
@@ -93,10 +93,10 @@ export default class CanvasBG {
 
     // 設定攝影機
     const setCameraSize = () => {
-      renderer.setSize(window.innerWidth, window.innerWidth * 0.5);
-      const aspectRatio = window.innerWidth / (window.innerWidth * 0.5);
+      renderer.setSize(this.mount.clientWidth, this.mount.clientHeight);
+      const aspectRatio = this.mount.clientWidth / this.mount.clientHeight;
       let range = 1.6;
-      if (window.innerWidth > window.innerHeight) {
+      if (this.mount.clientWidth > this.mount.clientHeight) {
         range = 2;
       } else {
         range = 1.6;
@@ -116,7 +116,7 @@ export default class CanvasBG {
     renderer.setPixelRatio(
       window.devicePixelRatio > 1.5 ? 1.5 : window.devicePixelRatio
     );
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(this.mount.clientWidth, this.mount.clientHeight);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     this.mount.appendChild(renderer.domElement);
@@ -168,7 +168,8 @@ export default class CanvasBG {
       amount: 0.13,
       bevelEnabled: false,
       material: 0,
-      extrudeMaterial: 1
+      extrudeMaterial: 1,
+      kerning: true
     };
     const createTextMeshes = font => {
       // const texture = new THREE.TextureLoader().load("textures/gradient2.png");

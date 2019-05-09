@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import * as opentype from "opentype.js";
+import * as opentype from "./opentype";
 /**
  * Created by gbox3d on 15. 5. 13..
  */
@@ -7,10 +7,10 @@ opentype.Glyph.prototype._3_getPath = function(x, y, fontSize) {
   x = x !== undefined ? x : 0;
   y = y !== undefined ? y : 0;
   fontSize = fontSize !== undefined ? fontSize : 72;
-  // var scale = (1 / this.font.unitsPerEm) * fontSize;
-  var scale = 1 / 1000 / fontSize;
+  var scale = (1 / this.font.unitsPerEm) * fontSize;
   var p = new opentype.Path();
   var commands = this.path.commands;
+  console.log(commands);
 
   for (var i = 0; i < commands.length; i += 1) {
     var cmd = commands[i];
@@ -89,7 +89,6 @@ opentype.Font.prototype.getTextGeometry = function(option) {
     switch (cmd.type) {
       case "M":
         path.moveTo(cmd.x, -cmd.y);
-
         break;
       case "L":
         path.lineTo(cmd.x, -cmd.y);
