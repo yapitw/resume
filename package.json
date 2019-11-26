@@ -8,8 +8,9 @@
     "build:dev": "webpack --mode=development",
     "dev": "webpack-dev-server --mode=development"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "yapi",
+  "license": "yapi",
+  "private": true,
   "dependencies": {
     "@tweenjs/tween.js": "^17.3.0",
     "normalize.css": "^8.0.1",
