@@ -144,65 +144,76 @@
         li
           | Learning front-end programming skills and 3D softwares from several online sources like Udemy, Udacity, Codecademy, Hahow, Hiskio, Youtube ...ETC.
   #column3.column
-    .block
-      h1.first-title Works
+    h1.first-title Works
+    .work
       a(href='https://yapitw.github.io/yapi-graphics/', target='_blank')
         img.work__img(src='images/work-graphics.jpg')
-      h3.subtitle
-        | Graphics study 
-        a(href='https://yapitw.github.io/yapi-graphics/', target='_blank') link
-        span  
-        a(href='https://github.com/yapitw/wordsring', target='_blank') Source Code
-      ul
-        li Graphics algorithms studies.
-    .block(style="page-break-after: always;")
+      .work-block
+        h3.subtitle
+          | Graphics study
+        ul
+          li
+            a(href='https://yapitw.github.io/yapi-graphics/', target='_blank') link
+            span  
+            a(href='https://github.com/yapitw/wordsring', target='_blank') Source Code
+          li Graphics algorithms studies.
+    .work
       a(href='http://yapitw.github.io/wordsring/build', target='_blank')
         img.work__img(src='images/work-wordsring.png')
-      h3.subtitle
-        | Words-ring simulation 
-        a(href='http://yapitw.github.io/wordsring/build', target='_blank') link
-        span  
-        a(href='https://github.com/yapitw/yapi-graphics', target='_blank') Source Code
-      ul
-        li Use three.js webgl library simulating 3D ring with customized content.
-    .block
+      .work-block
+        h3.subtitle
+          | Words-ring simulation 
+        ul
+          li
+            a(href='http://yapitw.github.io/wordsring/build', target='_blank') link
+            span  
+            a(href='https://github.com/yapitw/yapi-graphics', target='_blank') Source Code
+          li Use three.js webgl library simulating 3D ring with customized content.
+    .work
       a(href='http://www.starlike.com.tw/ARC/NODIN/', target='_blank')
         img.work__img(src='images/work-arcteryx.jpg')
-      h3.subtitle
-        | Arc'teryx NODIN 
-        a(href='http://www.starlike.com.tw/ARC/NODIN/', target='_blank') link
-      ul
-        li HTML Layout, CSS Animation.
-        li JQuery interaction.
-    .block
-      a(href='http://www.104.com.tw/cfdocs/project/2017Fresh/default.htm', target='_blank')
-        img.work__img(src='images/work-104.jpg')
-      h3.subtitle
-        | 104 Freshman event 
-        a(href='http://www.104.com.tw/cfdocs/project/2017Fresh/default.htm', target='_blank') link
-        |  (mobile version only)
-      ul
-        li Make intro animation with three.js library.
-        li Use mobile tilt sensor control camera angel.
-        li Control animation time line with scroll event.
-        li Sharing action with options using HTML5 2D canvas api.
-        li Sharing function using Facebook SDK.
-    .block
+      .work-block
+        h3.subtitle
+          | Arc'teryx NODIN 
+        ul
+          li
+            a(href='http://www.starlike.com.tw/ARC/NODIN/', target='_blank') link
+          li HTML Layout, CSS Animation.
+          li JQuery interaction.
+    .work
       a(href='https://www.104.com.tw/cfdocs/project/1707/170707_innolux_hr/', target='_blank')
         img.work__img(src='images/work-innolux.png')
-      h3.subtitle
-        | InnoLux recruitment 
-        a(href='https://www.104.com.tw/cfdocs/project/1707/170707_innolux_hr/', target='_blank') link
-      ul
-        li Interactive main vision using HTML5 Canvas api.
-    .block
+      .work-block
+        h3.subtitle
+          | InnoLux recruitment 
+        ul
+          li 
+            a(href='https://www.104.com.tw/cfdocs/project/1707/170707_innolux_hr/', target='_blank') link
+          li Interactive main vision using HTML5 Canvas api.
+    .work
+      a(href='http://www.104.com.tw/cfdocs/project/2017Fresh/default.htm', target='_blank')
+        img.work__img(src='images/work-104.jpg')
+      .work-block
+        h3.subtitle
+          | 104 Freshman event 
+        ul
+          li
+            a(href='http://www.104.com.tw/cfdocs/project/2017Fresh/default.htm', target='_blank') link
+            |  (mobile version only)
+          li Intro animation done with three.js library.
+          li Use mobile tilt sensor control camera angel.
+          li Control animation time line with scroll event.
+          li Sharing action with options using HTML5 2D canvas api.
+          li Sharing function using Facebook SDK.
+    .work
       a(href='http://yapi-art.surge.sh/', target='_blank')
         img.work__img(src='images/work-art.png')
-      h3.subtitle
-        | My Art works 
-        a(href='http://yapi-art.surge.sh/', target='_blank') link
-      ul
-        li My 2D and 3D creation for fun.
+      .work-block
+        h3.subtitle
+          | My Art works 
+        ul
+          li
+            a(href='http://yapi-art.surge.sh/', target='_blank') link
+          li My 2D and 3D creation for fun.
 .canvas-bg
   .canvas-wrapper
-  //- canvas(width='2160', height='1080')
