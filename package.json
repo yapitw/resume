@@ -16,7 +16,7 @@
     "normalize.css": "^8.0.1",
     "opentype.js": "1.0.0",
     "pug": "^2.0.3",
-    "three": "^0.104.0"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "css-loader": "^2.1.1",
