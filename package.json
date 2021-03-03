@@ -15,7 +15,7 @@
     "@tweenjs/tween.js": "^17.3.0",
     "normalize.css": "^8.0.1",
     "opentype.js": "1.0.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "three": "^0.104.0"
   },
   "devDependencies": {
